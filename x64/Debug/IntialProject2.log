@@ -1,4 +1,4 @@
 ﻿  IntialProject2.cpp
-D:\PERKULIAHAN\SEMESTER 5\GRAFIKA KOMPUTER\uts\IntialProject2\IntialProject2.cpp(24,38): warning C4305: 'initializing': truncation from 'double' to 'float'
-D:\PERKULIAHAN\SEMESTER 5\GRAFIKA KOMPUTER\uts\IntialProject2\IntialProject2.cpp(202,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  IntialProject2.vcxproj -> D:\PERKULIAHAN\SEMESTER 5\GRAFIKA KOMPUTER\uts\IntialProject2\x64\Debug\IntialProject2.exe
+D:\PERKULIAHAN\SEMESTER 5\GRAFIKA KOMPUTER\UTS_GRAFIKA_KOMPUTER\IntialProject2\IntialProject2.cpp(24,38): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\PERKULIAHAN\SEMESTER 5\GRAFIKA KOMPUTER\UTS_GRAFIKA_KOMPUTER\IntialProject2\IntialProject2.cpp(208,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  IntialProject2.vcxproj -> D:\PERKULIAHAN\SEMESTER 5\GRAFIKA KOMPUTER\UTS_GRAFIKA_KOMPUTER\IntialProject2\x64\Debug\IntialProject2.exe

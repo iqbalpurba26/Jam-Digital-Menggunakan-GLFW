@@ -26,7 +26,6 @@ float velocityHourPointer = -0.004167;
 float currentSecondPointer = 270.0f;
 float currentMinutePointer = 270.0f;
 float currentHourPointer = 270.0f;
-
 float currentTime = 0.0f;
 float deltaTime = 0.0f;
 float lastTime = 0.0f;
@@ -38,47 +37,6 @@ float derajat = 180.0f;
 float konversiRadian = pi / derajat;
 
 void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mode) {
-    if (key == GLFW_KEY_C && action == GLFW_PRESS) {
-        for (int i = 0; i < 4;i++) {
-            color1[i] = (rand() * 1.0f)/RAND_MAX;
-            color2[i] = (rand() * 1.0f) / RAND_MAX;
-            color3[i] = (rand() * 1.0f) / RAND_MAX;
-
-        }
-
-
-        cout << color1[0] << " " << color1[1] << color1[2] << " " << color1[3] << endl;
-        cout << color2[0] << " " << color2[1] << color2[2] << " " << color2[3] << endl;
-        cout << color3[0] << " " << color3[1] << color3[2] << " " << color3[3] << endl;
-    
-        glUniform4f(color1Loc, color1[0], color1[1], color1[2], color1[3]);
-        glUniform4f(color2Loc, color2[0], color2[1], color2[2], color2[3]);
-        glUniform4f(color3Loc, color3[0], color3[1], color3[2], color3[3]);
-    }
-
-    if (key == GLFW_KEY_U && action == GLFW_PRESS) {
-        speedUp += 2.0f;
-    }
-
-    if (key == GLFW_KEY_R && action == GLFW_PRESS) {
-        speedUp = 1.0f;
-    }
-
-    if (key == GLFW_KEY_M && action == GLFW_PRESS) {
-        glfwSetTime(currentTime +60);
-    }
-
-    if (key == GLFW_KEY_H && action == GLFW_PRESS) {
-        glfwSetTime(currentTime + 3600);
-    }
-
-    if (key == GLFW_KEY_1 && action == GLFW_PRESS) {
-        glfwSetTime(currentTime - 60);
-    }
-
-    if (key == GLFW_KEY_2 && action == GLFW_PRESS) {
-        glfwSetTime(currentTime - 3600);
-    }
 
     if (key == GLFW_KEY_W && action == GLFW_PRESS) {
         float userJam, userMenit, userDetik;
@@ -99,6 +57,54 @@ void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 
         glfwSetTime(hour + minute + second);
     }
+
+
+    if (key == GLFW_KEY_M && action == GLFW_PRESS) {
+        glfwSetTime(currentTime + 60);
+    }
+
+    if (key == GLFW_KEY_H && action == GLFW_PRESS) {
+        glfwSetTime(currentTime + 3600);
+    }
+
+    if (key == GLFW_KEY_1 && action == GLFW_PRESS) {
+        glfwSetTime(currentTime - 60);
+    }
+
+    if (key == GLFW_KEY_2 && action == GLFW_PRESS) {
+        glfwSetTime(currentTime - 3600);
+    }
+
+    if (key == GLFW_KEY_U && action == GLFW_PRESS) {
+        speedUp += 2.0f;
+    }
+
+    if (key == GLFW_KEY_R && action == GLFW_PRESS) {
+        speedUp = 1.0f;
+    }
+
+    if (key == GLFW_KEY_C && action == GLFW_PRESS) {
+        for (int i = 0; i < 4;i++) {
+            color1[i] = (rand() * 1.0f)/RAND_MAX;
+            color2[i] = (rand() * 1.0f) / RAND_MAX;
+            color3[i] = (rand() * 1.0f) / RAND_MAX;
+
+        }
+
+        cout << color1[0] << " " << color1[1] << color1[2] << " " << color1[3] << endl;
+        cout << color2[0] << " " << color2[1] << color2[2] << " " << color2[3] << endl;
+        cout << color3[0] << " " << color3[1] << color3[2] << " " << color3[3] << endl;
+    
+        glUniform4f(color1Loc, color1[0], color1[1], color1[2], color1[3]);
+        glUniform4f(color2Loc, color2[0], color2[1], color2[2], color2[3]);
+        glUniform4f(color3Loc, color3[0], color3[1], color3[2], color3[3]);
+    }
+
+   
+
+   
+
+  
    
 }
 

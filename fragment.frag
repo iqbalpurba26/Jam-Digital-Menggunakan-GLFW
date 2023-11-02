@@ -18,8 +18,8 @@ void main()
 	float distance = length(vPos);
 
 	// Settingan Jam
-	float dotHour = dot(normalize(vPos), vec2(0.8 * cos(currentHourPointer), 0.8 * sin(currentHourPointer)));
-	if (distance <=0.9 && dotHour < 0.8 * sin(currentHourPointer))
+	float dotHour = dot(normalize(vPos), vec2(cos(currentHourPointer), sin(currentHourPointer)));
+	if (distance <=0.9 && dotHour < sin(currentHourPointer))
 	{
 		color = color1;	
 	}
@@ -30,8 +30,8 @@ void main()
 
 
 	// Settingan Menit
-	float dotMinute = dot(normalize(vPos), vec2(0.6 * cos(currentMinutePointer), 0.6 * sin(currentMinutePointer)));
-	if (distance <= 0.7 && dotMinute < 0.6 * sin(currentMinutePointer))
+	float dotMinute = dot(normalize(vPos), vec2(cos(currentMinutePointer), sin(currentMinutePointer)));
+	if (distance <= 0.7 && dotMinute < sin(currentMinutePointer))
 	{
 		color = color2;
 	}
